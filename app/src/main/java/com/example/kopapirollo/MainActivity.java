@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private AlertDialog gamefinish;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,13 +34,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 ImageViewPlayer.setImageResource(R.drawable.rock);
-                Random rnd = new Random();
-                int geptipp = rnd.nextInt(3); //0 ko, 1 papir, 2 ollo
-                if (geptipp == 2) {
+             //   Random rnd = new Random();
+              //  int geptipp = rnd.nextInt(3); //0 ko, 1 papir, 2 ollo
+                if (getTipp() == 2) {
                     ImageViewComputer.setImageResource(R.drawable.scissors);
                     playerpoint++;
 
-                } else if (geptipp == 1) {
+                } else if (getTipp() == 1) {
                     ImageViewComputer.setImageResource(R.drawable.paper);
                     computerpoint++;
 
@@ -59,13 +60,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ImageViewPlayer.setImageResource(R.drawable.paper);
-                Random rnd = new Random();
-                int geptipp = rnd.nextInt(3); //0 ko, 1 papir, 2 ollo
-                if (geptipp == 0) {
+               // Random rnd = new Random();
+               // int geptipp = rnd.nextInt(3); //0 ko, 1 papir, 2 ollo
+                if (getTipp() == 0) {
                     ImageViewComputer.setImageResource(R.drawable.rock);
                     playerpoint++;
 
-                } else if (geptipp == 2) {
+                } else if (getTipp() == 2) {
                     ImageViewComputer.setImageResource(R.drawable.scissors);
                     computerpoint++;
 
@@ -84,13 +85,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 ImageViewPlayer.setImageResource(R.drawable.scissors);
-                Random rnd = new Random();
-                int geptipp = rnd.nextInt(3); //0 ko, 1 papir, 2 ollo
-                if (geptipp == 1) {
+               // Random rnd = new Random();
+               // int geptipp = rnd.nextInt(3); //0 ko, 1 papir, 2 ollo
+                if (getTipp() == 1) {
                     ImageViewComputer.setImageResource(R.drawable.paper);
                     playerpoint++;
 
-                } else if (geptipp == 0) {
+                } else if (getTipp() == 0) {
                     ImageViewComputer.setImageResource(R.drawable.rock);
                     computerpoint++;
 
@@ -156,6 +157,26 @@ public class MainActivity extends AppCompatActivity {
         computerpoint=0;
         playerpoint=0;
         TextViewEredmeny.setText("Eredmény: Ember: 0 Computer: 0" );
+        ImageViewComputer.setImageResource(R.drawable.rock);
+        ImageViewPlayer.setImageResource(R.drawable.rock);
+
+
+
+    }
+
+
+    private int getTipp(){
+
+        Random rnd = new Random();
+        int geptipp = rnd.nextInt(3); //0 ko, 1 papir, 2 ollo
+
+
+
+        return geptipp;
+
+    }
+
+
 
 
     }
@@ -164,6 +185,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-}
+
+
+
 
 
