@@ -34,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 ImageViewPlayer.setImageResource(R.drawable.rock);
-             //   Random rnd = new Random();
-              //  int geptipp = rnd.nextInt(3); //0 ko, 1 papir, 2 ollo
+
                 if (getTipp() == 2) {
                     ImageViewComputer.setImageResource(R.drawable.scissors);
                     playerpoint++;
@@ -60,8 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ImageViewPlayer.setImageResource(R.drawable.paper);
-               // Random rnd = new Random();
-               // int geptipp = rnd.nextInt(3); //0 ko, 1 papir, 2 ollo
+
                 if (getTipp() == 0) {
                     ImageViewComputer.setImageResource(R.drawable.rock);
                     playerpoint++;
@@ -85,8 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 ImageViewPlayer.setImageResource(R.drawable.scissors);
-               // Random rnd = new Random();
-               // int geptipp = rnd.nextInt(3); //0 ko, 1 papir, 2 ollo
+
                 if (getTipp() == 1) {
                     ImageViewComputer.setImageResource(R.drawable.paper);
                     playerpoint++;
@@ -175,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
         return geptipp;
 
     }
+
 
 
 
